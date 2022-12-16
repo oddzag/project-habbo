@@ -1,0 +1,357 @@
+* {
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box; 
+}
+
+body { background-color: #5db2d5;cursor: url(../img/cursor.png), auto;}
+p { font-family: Volter; color: #330; font-size: 9px; padding: 0; margin: 0; line-height: 12px; }
+p a { color:#FF6; text-decoration: underline; }
+p.b { font-family: Volter-Bold; }
+
+@font-face {
+    font-family: 'Volter';
+    src: local('Volter'), url(../fonts/Volter.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Volter-Bold';
+    src: local('Volter-Bold'), url(../fonts/Volter-Bold.ttf) format('truetype');
+}
+
+.sticky {
+    width: 185px;
+    height: 178px;
+    position: fixed;
+}
+
+.sticky p {
+    margin: 11px 6px 19px 6px;
+}
+
+.sticky_head {
+    width: 183px;
+    height: 19px;
+}
+
+.sticky_bg_b,
+.sticky_bg_g,
+.sticky_bg_p,
+.sticky_bg_y {
+    background-repeat: no-repeat;
+    width: 185px;
+    height: 178px;
+}
+
+.sticky_bg_b {background-image: url(../img/sticky/sticky_bg_b.png);}
+.sticky_bg_g {background-image: url(../img/sticky/sticky_bg_g.png);}
+.sticky_bg_p {background-image: url(../img/sticky/sticky_bg_p.png);}
+.sticky_bg_y {background-image: url(../img/sticky/sticky_bg_y.png);}
+
+.sticky_bin {
+    background-image: url(../img/sticky/sticky_bin.png);
+    width: 9px;
+    height: 10px;
+    display: inline-block;
+    margin: 0 8px 0 8px;
+}
+
+.sticky_b,
+.sticky_g,
+.sticky_p,
+.sticky_y {
+    width: 9px;
+    height: 9px;
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.sticky_b {background-image: url(../img/sticky/sticky_b.png);}
+.sticky_g {background-image: url(../img/sticky/sticky_g.png);}
+.sticky_p {background-image: url(../img/sticky/sticky_p.png);}
+.sticky_y {background-image: url(../img/sticky/sticky_y.png);}
+
+.sticky_exit {
+    background-image: url(../img/sticky/sticky_exit.png);
+    width: 10px;
+    height: 10px;
+    float: right;
+    margin: 5px 5px 0 0;
+}
+
+
+/*========== HOTEL VIEW ==========*/
+
+#corner_logo {
+    background-image: url(../img/corner_logo.png);
+    width: 218px;
+    height: 202px;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+#hv_select {
+    width: max-content;
+    position: fixed;
+    top: 10;
+    right: 0;
+    margin-right: 20px;
+}
+
+.hv_select_menu {
+    background-image: url(../img/hv_select_bg.png);
+    background-repeat: no-repeat;
+    font-family: 'Volter';
+    font-size: 9px;
+    width: 80px;
+    height: 20px;
+    padding: 5px 5px;
+}
+
+#hv_uk {
+    background-image: url(../img/views/uk.png);
+    width: 1152px;
+    height: 614px;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 59px;
+    position: fixed;
+}
+
+#hv_fi {
+    background-image: url(../img/views/fi.png);
+    width: 1030px;
+    height: 1080px;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 59px;
+    position: fixed;
+}
+
+#hv_ui_bg {    
+    background-color: #000;
+    width: 100%;
+    height: 59px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+#hv_ui_bg p {
+    color: #efefef;
+    font-family: 'Volter';
+}
+
+#hv_ui_wrap { 
+    margin: 0 auto;
+    width: max-content;
+    max-height: 20px;
+}
+
+#hv_ui {
+
+}
+
+#hv_ui * {
+    display: inline-block;
+}
+
+#box_title {
+    width: max-content;
+    margin: 0 auto;
+
+    font-size: 9px;
+    font-family: Volter-Bold;
+    color: #efefef;
+    top: 9px;
+    left: -1px;
+    position: relative;
+}
+
+#id_top,
+#help_top {
+    background-image: url(../img/boxes/default/top.png);
+    width: 307px;
+    height: 35px;
+    position: relative;
+}
+
+#id_mid,
+#help_mid {
+    background-image: url(../img/boxes/default/mid.png);
+    width: 307px;
+    min-height: 219px;
+    padding-left: 10px;
+    position: relative;
+}
+
+#id_bottom,
+#help_bottom {
+    background-image: url(../img/boxes/default/bottom.png);
+    width: 307px;
+    height: 20px;
+}
+
+#box_default_exit {
+    background-image: url(../img/boxes/default/exit.png);
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    top: 7px;
+    right: 16px;
+}
+
+#box_button_ok {
+    background-image: url(../img/boxes/default/button_ok.png);
+    width: 35px;
+    height: 23px;
+    margin: 41px 0 0 0;
+    display: inline-block;
+}
+
+#box_button_ok:active {
+    background-image: url(../img/boxes/default/button_ok_active.png);
+}
+
+#box_button_tutorial {
+    background-image: url(../img/boxes/default/button_tutorial.png);
+    width: 107px;
+    height: 18px;
+    margin: 44px 0 0 48px;
+    position: absolute;
+    display: inline-block;
+}
+
+#box_button_tutorial:active {
+    background-image: url(../img/boxes/default/button_tutorial_active.png);
+}
+
+/*========== Habbo ID   ==========*/
+
+#hv_ui_id {
+    min-width: 152px;
+}
+
+#habbo_id {
+    width: max-content;
+    height: 405px;
+}
+
+#id_mid {
+    min-height: 330px;
+}
+
+#id_content {
+    width: 284px;
+}
+
+#id_head {
+    background-image: url(../img/id/head.png);
+    width: 26px; 
+    height: 33px;
+    display: block;
+    float: left;
+}
+
+#id_name {
+    display: block;
+    height: 12px;
+}
+
+#id_motto {
+    display: block;
+    height: 12px;
+}
+
+#id_update {
+    display: block;
+    height: 12px;
+}
+
+#details_top {
+    background-image: url(../img/id/details_top.png);
+    width: 266px;
+    height: 84px;
+    margin: 0 auto;
+}
+
+#details_username {
+    font-family: Volter-Bold;
+    font-size: 18px;
+    line-height: 14px;
+
+    width: max-content;
+    margin: 0 auto;
+    padding: 15px 0 0 0;
+}
+
+#details_mission {
+    font-family: Volter-Bold;
+    font-size: 9px;
+    line-height: 7px;
+
+    width: max-content;
+    margin: 0 auto;
+    padding: 14px 0 0 0;
+}
+
+#details_motto {
+    font-family: Volter;
+    font-size: 9px;
+
+    max-width: 241px;
+    margin: 10px 0 0 14px;
+}
+
+
+/*========== Habbo Help ==========*/
+
+#hv_ui_help {
+
+}
+
+#habbo_help {
+    width: max-content;
+}
+
+#help_content {
+    margin: 23px 0 8px 61px;
+    position: absolute;
+}
+
+#question_mark {
+    background-image: url(../img/question_mark.png);
+    width: 20px;
+    height: 30px;
+}
+
+#help_topics ul {
+    font-family: 'Volter';
+    font-size: 9px;
+    line-height: 12px;
+    text-decoration: underline;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#help_topics a {
+    color:#000;
+}
+
+/* organization got away from me, will eventually neaten up.. hopefully */
+
+/*========== Habbo Console ==========*/
+
+#hv_ui_console {
+    
+}
