@@ -17,6 +17,7 @@ p { font-family: Volter; color: #330; font-size: 9px; padding: 0; margin: 0; lin
 p a { color:#FF6; text-decoration: underline; }
 p.b { font-family: Volter-Bold; }
 
+/* Using 'margin: 0 auto:' with volter font causes it be blurry */
 @font-face {
     font-family: 'Volter';
     src: local('Volter'), url(../fonts/Volter.ttf) format('truetype');
@@ -177,7 +178,7 @@ p.b { font-family: Volter-Bold; }
     position: relative;
 }
 
-#id_top,
+#details_top,
 #help_top {
     background-image: url(../img/boxes/default/top.png);
     width: 307px;
@@ -185,7 +186,7 @@ p.b { font-family: Volter-Bold; }
     position: relative;
 }
 
-#id_mid,
+#details_mid,
 #help_mid {
     background-image: url(../img/boxes/default/mid.png);
     width: 307px;
@@ -241,43 +242,45 @@ p.b { font-family: Volter-Bold; }
     min-width: 152px;
 }
 
-#habbo_id {
-    width: max-content;
-    height: 405px;
-}
-
-#id_mid {
-    min-height: 330px;
-}
-
-#id_content {
-    width: 284px;
-}
-
-#id_head {
+#hv_ui_id_head {
     background-image: url(../img/id/head.png);
     width: 26px; 
     height: 33px;
+    margin: 9px 8px 0 0;
     display: block;
     float: left;
 }
 
-#id_name {
+#hv_ui_id_name {
     display: block;
     height: 12px;
 }
 
-#id_motto {
+#hv_ui_id_motto {
     display: block;
     height: 12px;
 }
 
-#id_update {
+#hv_ui_id_update {
     display: block;
     height: 12px;
 }
 
-#details_top {
+#habbo_id {
+    width: max-content;
+    height: 405px;
+    position: absolute;
+}
+
+#details_mid {
+    min-height: 330px;
+}
+
+#details_content {
+    width: 284px;
+}
+
+#details_top_box {
     background-image: url(../img/id/details_top.png);
     width: 266px;
     height: 84px;
@@ -321,6 +324,7 @@ p.b { font-family: Volter-Bold; }
 
 #habbo_help {
     width: max-content;
+    position: absolute;
 }
 
 #help_content {
@@ -353,5 +357,69 @@ p.b { font-family: Volter-Bold; }
 /*========== Habbo Console ==========*/
 
 #hv_ui_console {
-    
+    min-width: 134px;
+}
+
+#console_icon {
+    background-image: url(../img/console/console_icon.png);
+    width: 20px;
+    height: 35px;
+}
+
+#habbo_console {
+    background-image: url(../img/console/console_bg.png);
+    width: 256px;
+    height: 297px;
+    position: absolute;
+}
+
+#console_title {
+    width: max-content;
+    margin: 0 auto;
+
+    font-size: 9px;
+    font-family: Volter-Bold;
+    color: #996600;
+    top: 10px;
+    position: relative;
+}
+
+#console_exit {
+    background-image: url(../img/console/exit.png);
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    top: 7px;
+    right: 17px;
+}
+
+#console_buttons {
+    width: 188px;
+    height: 48px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 0 4px 33px;
+}
+
+#console_button_myinfo { background-image: url(../img/console/button_myinfo.png); }
+#console_button_friends { background-image: url(../img/console/button_friends.png); }
+#console_button_find { background-image: url(../img/console/button_find.png); }
+#console_button_help { background-image: url(../img/console/button_help.png); }
+
+#console_button_myinfo.active { background-image: url(../img/console/button_myinfo_active.png); }
+#console_button_friends.active { background-image: url(../img/console/button_friends_active.png);}
+
+#console_button_myinfo,
+#console_button_friends,
+#console_button_find,
+#console_button_help,
+#console_button_myinfo.active,
+#console_button_friends.active,
+#console_button_find.active,
+#console_button_help.active {
+    width: 47px;
+    height: 48px;
+    display: inline-block;
 }

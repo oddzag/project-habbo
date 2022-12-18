@@ -11,16 +11,16 @@ function ID({showID, setShowID}) {
     return (
         <Draggable defaultPosition={{x: 300, y: 200}}>
             <div id="habbo_id">
-                <div id="id_top">
+                <div id="details_top">
                     <div id="box_title">
                         Habbo Details
                     </div>
                     <div id="box_default_exit" onClick={closeID}></div>
                 </div>
                 
-                <div id="id_mid">
-                    <div id="id_content">
-                        <div id="details_top">
+                <div id="details_mid">
+                    <div id="details_content">
+                        <div id="details_top_box">
                             <div id="details_username">oddzag</div>
                             <div id="details_mission">Your Mission:</div>
                             <div id="details_motto">Ball like Wall</div>
