@@ -2,14 +2,15 @@ import React, { useState }  from 'react';
 import Dropdown from 'react-dropdown';
 import Draggable from 'react-draggable';
 
-import Sticky from './Sticky.js'; 
+import Sticky from './module/Sticky.js'; 
+import Notes from './module/Notepad.js';
 
-import ID from './ID.js';
-import Console from './Console.js';
+import ID from './module/ID.js';
+import Console from './module/Console.js';
 //import Purse from './Purse.js';
 //import Navigator from './Navigator.js';
 //import HC from './HC.js';
-import Help from './Help.js';
+import Help from './module/Help.js';
 
 function HotelView(props) {
 
@@ -39,14 +40,13 @@ function HotelView(props) {
         <div id="corner_logo"></div>
         <div id="hv_uk"></div>
 
-        {/*this is where the component is rendered, but removed if setShow flag is false */} 
+        {/*this is where the component is rendered, but removed if setShow[...] flag is false */} 
         {showSticky ? <Sticky showSticky={showSticky} setShowSticky={setShowSticky} message={<WelcomeMessage />}/> : null}
 
         {showID ? <ID showID={showID} setShowID={setShowID}/> : null}
         {showConsole ? <Console showConsole={showConsole} setShowConsole={setShowConsole}/> : null}
         {showHelp ? <Help showHelp={showHelp} setShowHelp={setShowHelp}/> : null}
-
-
+        <Notes />
         <div id="hv_ui_bg">
             <div id="hv_ui_wrap">
                 <div id="hv_ui">
@@ -86,6 +86,7 @@ function HotelView(props) {
 
 export default HotelView;
 
+//STICK MESSAGES
 function WelcomeMessage() {
     return (
         <>

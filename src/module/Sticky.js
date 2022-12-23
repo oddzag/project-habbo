@@ -5,14 +5,10 @@ function Sticky({showSticky, setShowSticky, message}) {
 
     const [bg, setBG] = useState('sticky_bg_b');
     const closeSticky = () => {  
-        if(showSticky) setShowSticky(false);
-        else setShowSticky(true);
+        setShowSticky(!showSticky);
     };
     return (
-        //Draggable's documentation does not allow for variable values of x/y bounds
-        //(or I just haven't figured it out yet)
-        //will need that functionality to account for big/small monitors
-        //x/y values are in px
+        //n1
         <DraggableCore defaultPosition={{x: 400, y: 200}}>
             <div className={"sticky " + bg}>
                 <div className="sticky_head">
@@ -33,5 +29,7 @@ function Sticky({showSticky, setShowSticky, message}) {
 
 export default Sticky;
 
-
-
+//Draggable's documentation does not allow for variable values of x/y bounds
+//(or I just haven't figured it out yet)
+//will need that functionality to account for big/small monitors
+//x/y values are in px

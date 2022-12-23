@@ -1,0 +1,5 @@
+@font-face {
+    font-family: 'Volter-Bold';
+    src: local('Volter-Bold'), url(../fonts/Volter-Bold.ttf) format('truetype');
+}
+h2 { font-family: Volter-Bold; font-size: 9px; line-height: 12px; margin: 0; padding: 0;}
