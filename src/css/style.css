@@ -1,0 +1,31 @@
+* {
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box; 
+}
+
+body { background-color: #5db2d5;cursor: url(../img/cursor.png), auto; font-family: Volter; font-size: 9px}
+p { font-family: Volter; color: #330; font-size: 9px; padding: 0; margin: 0; line-height: 12px; }
+p a { color:#FF6; text-decoration: underline; }
+body b { font-family: Volter-Bold; padding: 0; margin: 0; line-height: 12px;}
+
+
+/* Using 'margin: 0 auto:' with volter font causes it be blurry */
+@font-face {
+    font-family: 'Volter';
+    src: local('Volter'), url(../fonts/Volter.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Volter-Bold';
+    src: local('Volter-Bold'), url(../fonts/Volter-Bold.ttf) format('truetype');
+    font-size: 9px;
+}
